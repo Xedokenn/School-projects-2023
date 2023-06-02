@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: rgb(250, 235, 215);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-size: 13px;
+    color: #333;
+    
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'kontakt galeria promocje'
+    'lista lista lista'
+    'footer footer footer';
+  }
+
+  header {
+    grid-area: header;
+    text-align: center;
+    color: white;
+    background-color: rgb(205, 92, 92);
+    padding: 5px;
+  }
+
+
+
+  div {
+    grid-area: kontakt;
+    width: 50%;
+    height: 500px;
+    background-color: rgb(250, 235, 215);
+  }
+
+  aside {
+    grid-area: promocje;
+    width: 25%;
+    height: 500px;
+    background-color: rgb(250, 235, 215);
+  }
+
+  nav {
+    grid-area: lista;
+    text-align: center;
+    color: rwhite;
+    background-color: rgb(210, 180, 140);
+  }
+
+  footer {
+    grid-area: footer;
+    text-align: center;
+    color: white;
+    background-color: rgb(205, 92, 92);
+    padding: 5px;
+  }
+
+  main {
+    grid-area: galeria;
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    height: 500px;
+    background-color: rgb(250, 235, 215);
+  }
+
+  img {
+    height: 100px;
+    justify-self: stretch;    
+    padding: 5px;
+  }
+  img:hover {
+    background-color: rgb(210, 180, 140);
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+  }

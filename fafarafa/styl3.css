@@ -1,0 +1,55 @@
+.body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#top{
+    background-color: #29434E;
+    color: white;
+    text-align: center;
+    width: 70%;
+    height: 70px;
+    float: left;
+}
+
+#bot{
+    background-color: #29434E;
+    color: white;
+    width: 30%;
+    height: 70px;
+    float: left;
+}
+#pol{
+    background-color: #b0bec5;
+    height: 320px;
+    overflow: scroll;
+    padding: 1px;
+}
+
+#fil{
+    background-color: #b0bec5;
+    height: 320px;
+    overflow: scroll;
+}
+
+img{
+    padding: 5px;
+    width: 226px;
+    height: 280px;
+}
+
+h3{
+    background-color: #546e7a;
+    color: white;
+    margin: 0px;
+}
+
+h4{
+    text-align: center;
+    color: white;
+    margin: 0px;
+}
+
+footer{
+    background-color: #29434E;
+    color: white;
+}

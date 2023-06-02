@@ -1,0 +1,35 @@
+section{
+    background-color: rgb(57, 180, 107);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    width: 20%;
+    height: 220px;
+    float: left;
+}
+
+article{
+    width: 300px;
+    clear:both;
+}
+
+footer{
+    background-color: rgb(57, 180, 107);
+    color: white;
+    text-align: center;
+    font-size: 150%;
+}
+
+
+a{
+    color: white;
+}
+
+button{
+    background-color: rgb(57, 180, 107);
+    border-color: rgb(57, 180, 107);
+    border-radius: 1px;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}

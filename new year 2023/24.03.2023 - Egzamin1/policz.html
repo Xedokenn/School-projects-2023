@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remont mieszkań</title>
+    <link rel="stylesheet" href="remont.css">
+    <script>
+        function policz(){
+            let p = document.getElementById("u0").value;
+            if (document.getElementById("c1").checked){
+                document.getElementById("out").innerHTML = "koszt kafelowania: " + p*70 + "zł"
+            } else if (document.getElementById("c2").checked){
+                document.getElementById("out").innerHTML = "koszt kafelowania: " + p*80 + "zł"
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <section id="1"><img src="logo.png" alt="logo"></section>
+        <section id="2"><a href="index.html">O FIRMIE</a></section>
+        <section id="3"><a href="adres.html">ADRES</a></section>
+        <section id="4"><a href="policz.html">POLICZ</a></section>
+        <section id="5"><a href="https://www.jakremontowac.pl/">LINKI</a></section>
+    </header>
+    <main>
+        <nav>
+            <h1>Kafelkowanie  łazienki</h1>
+            <label for="liczba">powierzchnia w ㎡ :</label>
+            <input type="number" id="u0"><br>
+            <input type="radio" id="c1" name="baba" value="70">
+            <label for="html">Płytki 20 x 20 cm</label><br>
+            <input type="radio" id="c2" name="baba" value="80">
+            <label for="html">Płytki 25 x 12 cm</label><br>
+            <button onclick="policz()">PRZELICZ</button>
+            <p id="out"></p>
+        </nav>
+        <article>
+        </article>
+    </main>
+    <footer>
+        Autor strony: 213742069
+    </footer>
+</body>
+</html>

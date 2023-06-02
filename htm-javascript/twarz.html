@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>majen Grid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function suma(){
+            if(document.getElementById("Pilling").checked == true)
+            {
+                a = 45;
+            }
+            else{
+                a = 0
+            }
+            if(document.getElementById("Maska").checked == true)
+            {
+                b = 30;
+            }
+            else{
+                b = 0
+            }
+            if(document.getElementById("Masaz twarzy").checked == true)
+            {
+                c = 20;
+            }
+            else{
+                c = 0
+            }
+            if(document.getElementById("Regulacja brwi").checked == true)
+            {
+                d = 5;
+            }
+            else{
+                d = 0
+            }
+            var suma = a + b + c + d;
+            document.getElementById("wynik").innerHTML="Cena zabegów wynosi: " + String(suma);
+        };
+    </script>
+    </head>
+    <body>
+        <div class="title">
+            <h1>Salon Kosmetyczny</h1>
+        </div>
+        <div class="left">
+            <h4>W ofercie</h4>
+            <br>
+            <ul class="punktowa">
+                <li><a href="twarz.html">Zabieg na twarz</a>
+                    <ol>
+                        <li>Pilling</li>
+                        <li>Maska</li>
+                        <li>Regulacja brwi</li>
+                    </ol>
+                </li>
+                <li>Masaż</li>
+                <li>Diety oczyszczające</li>
+            </ul>
+            <br>
+            <a href="index.html">Do strony głównej</a>
+        </div>
+        <div class="main">
+            <h2>sprawdź cenę swojej wizyty</h2><br>
+            <input type="checkbox" id="Pilling" name="Pilling" value="1">
+            <label for="Pilling">Pilling</label><br>
+            <input type="checkbox" id="Maska" name="Maska" value="1">
+            <label for="Maska">Maska</label><br>
+            <input type="checkbox" id="Masaz twarzy" name="Masaz twarzy" value="1">
+            <label for="Masaz twarzy">Masaż twarzy</label><br>
+            <input type="checkbox" id="Regulacja brwi" name="Regulacja brwi" value="1">
+            <label for="Regulacja brwi">Regulacja brwi</label><br>
+            <button onclick="suma()">Sprawdź cene</button><br>
+            <p id="wynik">Cena zabiegów</p>
+        </div>
+        <div class="photo">
+            <img class="obraz1" src="obraz1.jpg" alt="" tittle="Samica YEP">
+        </div>
+        <div class="footer">
+            autor: Jakub Woźniak
+        </div>
+    </body>
+</html>

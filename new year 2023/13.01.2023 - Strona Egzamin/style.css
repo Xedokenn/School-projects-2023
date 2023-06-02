@@ -1,0 +1,64 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#lewo{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left; 
+}
+
+#prawo{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    float: left;
+    overflow: auto;
+}
+
+img{
+    padding: 10px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color: white;
+    float: left;
+}
+
+footer{
+    background-color: dimgray;
+    color: white;
+    
+}
+
+#lorem{
+    float: left;
+}
+
+p{
+    padding: 10px;
+}
+
+ul{
+    float: left;
+}
+
+#b1{
+    background-color: indigo;
+}
+
+#b2{
+    background-color: steelblue;
+}
+
+#b3{
+    background-color: olive;
+}

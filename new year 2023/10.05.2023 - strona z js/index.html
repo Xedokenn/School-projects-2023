@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Function Onclick</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script>
+            function c1(){
+                document.getElementById("navi").innerHTML = "The wild boar, also known as the wild swine, common wild pig, Eurasian wild pig, or simply wild pig, is a suid native to much of Eurasia and North Africa, and has been introduced to the Americas and Oceania. The species is now one of the widest-ranging mammals in the world, as well as the most widespread suiform.";
+            }
+            function c2(){
+                document.getElementById("navi").innerHTML = "The meerkat or suricate is a small mongoose found in southern Africa. It is characterised by a broad head, large eyes, a pointed snout, long legs, a thin tapering tail, and a brindled coat pattern. The head-and-body length is around 24–35 cm, and the weight is typically between 0.62 and 0.97 kg. ";
+            }
+            function c3(){
+                document.getElementById("navi").innerHTML = "Erinaceus is a genus of hedgehog from the family of Erinaceidae. There are four main species of Erinaceus. The range is all across Europe, throughout the Middle East, parts of Russia, and extending to northern China and Korea. The European hedgehog has been introduced to New Zealand. ";
+            }
+            function c4(){
+                document.getElementById("navi").innerHTML = "The llama is a domesticated South American camelid, widely used as a meat and pack animal by Andean cultures since the Pre-Columbian era. Llamas are social animals and live with others as a herd. Their wool is soft and contains only a small amount of lanolin. Llamas can learn simple tasks after a few repetitions";
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Informacje o zwierzętach</h1>
+        </header>
+        <main>
+            <button onclick="c1()"><img src="1.png" class="1p" id="1p"><p>dzik</p></button>
+            <button onclick="c2()"><img src="2.png" class="2p" id="2p"><p>surygatka</p></button>
+            <button onclick="c3()"><img src="3.png" class="3p" id="3p"><p>jeżu</p></button>
+            <button onclick="c4()"><img src="4.png" class="4p" id="4p"><p>lama</p></button>
+        </main>
+        <nav id="navi"></nav>
+        <footer>
+            <p>Pesel:  213742069</p>
+        </footer>
+    </body>
+</html>

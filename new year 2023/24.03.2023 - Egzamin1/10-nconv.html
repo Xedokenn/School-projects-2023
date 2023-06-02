@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 - n converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function policz(){
+        var typ = document.getElementById("typ").value;
+        var wejscie = document.getElementById("wejscie").value;
+        var przycisk = document.getElementById("przycisk").value;
+        var wyjscie = document.getElementById("wyjscie").value;
+
+        var wejscie = Number(wejscie);    
+        var wyjscie = wejscie.toString(typ); 
+        var wyjscie = wyjscie.toUpperCase();
+
+        document.getElementById("wyjscie").innerHTML = wyjscie;
+        
+    }
+    </script>
+</head>
+<body>
+    <main>
+            podaj liczbe w systemie dziesiętnym: 
+            <input type="text" id="wejscie"><br><br>
+            podaj system: 
+            <input type="number" id="typ"><br><br>
+            <button id="przycisk" onclick="policz()">try</button><br><br>
+            <p id="wyjscie"></p>
+    </main>
+    
+    <nav>
+        
+    </nav>
+    <aside>
+
+    </aside>
+    <footer>
+
+    </footer>
+</body>
+</html>

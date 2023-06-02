@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function b1(){
+            var background = document.getElementById("prawo")
+            background.style.backgroundColor = "indigo";
+            
+        }
+        function b2(){
+            var background = document.getElementById("prawo")
+            background.style.backgroundColor = "steelblue";
+        }
+        function b3(){
+            var background = document.getElementById("prawo")
+            background.style.backgroundColor = "olive";          
+        } 
+        function font(){
+            var font = document.getElementById("font").value
+            document.getElementById("prawo").style.color = font
+        }   
+
+        function disc(){
+            document.getElementById("el").style.listStyleType = "disc"
+        }
+
+        function square(){
+            document.getElementById("el").style.listStyleType = "square"
+        }
+
+        function circle(){
+            document.getElementById("el").style.listStyleType = "circle"
+        }
+
+        function rama(){
+            if(border.checked == true){
+                document.getElementById('zdj').style.border = '1px solid white'
+            } else {
+                document.getElementById('zdj').style.border = 'none'
+            }
+        }
+        function txs(size){
+            prawo = document.getElementById("prawo")
+            prawo.style.fontSize = size;
+        }
+    </script>
+</head>
+<body>
+    <article>
+        <section id="lewo">
+            <h1>Konfigurator stylu</h1>
+            <p>Podaj kolor tła</p>
+            <button id="b1" type="button" onclick="b1()">Indigo</button>
+            <button id="b2" type="button" onclick="b2()">SteelBlue</button>
+            <button id="b3" type="button" onclick="b3()">Olive</button>
+
+            <p>Podaj kolor czcionki</p>
+            <select onchange="font()" id="font">
+                <option value="White">White</option>
+                <option value="Tan">Tan</option>
+                <option value="SteelBlue">SteelBlue</option>
+                <option value="Olive">Olive</option>
+            </select>
+
+            <p>Podaj rozmiar czcionki, np.200%</p>
+            <input type="text" id="input" onblur="txs(value)" value="100%">
+
+            <p>Czy rysunek ma mieć ramkę?</p>
+            <input type="checkbox" id="rama" onclick="rama()" checked> Rysuj ramkę
+
+            <p>jaki jest typ punktora  list</p>
+            <input type="radio" id="disc" name="1" onclick="disc()" checked> dysk
+            <input type="radio" id="square" name="1" onclick="square()"> kwadrat
+            <input type="radio" id="circle" name="1"onclick="circle()"> okrąg
+        </section>
+        <section id="prawo"> 
+            <img src="gibraltar.jpg" id="zdj" alt="Półwysep Gibraltar">
+            <ul id="el">
+                <li>element1</li>
+                <li>element2</li>
+                <li>element3</li>
+            </ul>
+
+            <br><br><br><br><br><br>
+            <form action="php.php">
+                imie: <input type="textarea"><label></label><br><br>
+                nazwisko: <input type="textarea"><label></label><br><br>
+                pesel: <input type="textarea"><label></label><br><br>
+                
+            </form>
+
+
+
+
+            <br>
+            <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        </section>
+    </article>
+
+    <footer>
+        Autor: 2137420997
+
+    </footer>
+    
+</body>
+</html>

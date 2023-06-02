@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n - 10 converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function policz(){
+        var typ = document.getElementById("typ").value;
+        var wejscie = document.getElementById("wejscie").value;
+        var przycisk = document.getElementById("przycisk").value;
+        var wyjscie = document.getElementById("wyjscie").value;
+        let length = wejscie.length;
+        var wyjscie=Number(wejscie[0]);
+        
+
+    const symbole = {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "A": 10,
+        "B": 11,
+        "C": 12,
+        "D": 13,
+        "E": 14,
+        "F": 15,
+    };
+    for(let i=0;i<length-1;i++){
+        wyjscie = wyjscie*Number(typ) + symbole[(wejscie[i+1])];
+    }
+    document.getElementById("wyjscie").innerHTML = wyjscie;
+    
+    }
+    </script>
+</head>
+<body>
+    <main>
+            podaj liczbe: 
+            <input type="text" id="wejscie"><br><br>
+            podaj system: 
+            <input type="number" id="typ"><br><br>
+            <button id="przycisk" onclick="policz()">try</button><br><br>
+            <p id="wyjscie"></p>
+    </main>
+    
+    <nav>
+        
+    </nav>
+    <aside>
+
+    </aside>
+    <footer>
+
+    </footer>
+</body>
+</html>

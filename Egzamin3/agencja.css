@@ -1,0 +1,46 @@
+table, th, td {
+    border:2px solid brown;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 2px;
+    border-collapse: collapse;
+  }
+
+#left{
+    float: left;
+    width: 40%;
+    height: 600px;
+    background-color: #FF8989;
+  }
+
+#right{
+    float: left;
+    width: 60%;
+    height: 600px;
+    background-color: #7872D9;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    font-size: 150%;
+    text-align: right;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    border-color: blue;
+    background-color: cyan;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 2px;
+}
+
+h1{
+    text-align: center;
+}
+img{
+    height: 110px;
+    width: 100px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacja paliw</title>
+    <link rel="stylesheet" href="styl3.css">
+</head>
+
+<body>
+    <section>    <!-- baner lewy -->
+
+
+    </section> 
+
+
+    <aside>    <!-- baner prawy -->
+        <a href="stacja.html"><img src="home.png" alt=""></a>
+        <a href="obliczenia.html"><img src="znak.png" alt=""></a>
+    </aside> 
+
+
+    <main>    <!-- główny -->
+        <h3>Oblicz koszt paliwa</h3>
+        <p>Rodzaj paliwa (1-benzyna, 2-olej napędowy)</p>
+        <input type="number" name="pierwszy" id="pierwszy">
+        <p>Ile litrów?</p>
+        <input type="number" name="drugi" id="drugi">
+        <p><button onclick="funkcja1()">OBLICZ</button></p>
+        <p id="wynik"></p>
+
+    </main> 
+
+
+    <article>    <!-- blok lewy -->
+        <a href="kwerendy.txt">Pobierz kwerendy</a>
+
+    </article> 
+
+
+    <nav>    <!-- blok prawy -->
+        <img src="samochod.png" alt="samochód">
+
+    </nav> 
+
+
+    <footer>    <!-- stopka -->
+        <p>Strone opracował: PESEL</p>
+
+    </footer> 
+
+    <script>
+        function funkcja1() {
+            let pierwszy = document.getElementById("pierwszy").value;
+            let drugi = document.getElementById("drugi").value;
+            let wartosc = 0;
+
+            if(pierwszy==1){
+                wartosc = drugi * 4;
+            } else if(pierwszy==2){
+                wartosc = drugi * 3.5;
+            } else {
+                wartosc = 0;
+            }
+
+            document.getElementById("wynik").innerHTML = "Koszt paliwa wynosi " + wartosc + "zł";
+        }
+    </script>
+
+</body>
+
+</html>

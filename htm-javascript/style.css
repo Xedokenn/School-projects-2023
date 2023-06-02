@@ -1,0 +1,66 @@
+  body {
+    background-color: white;
+    font-family: Garamond;
+  }
+
+.title{
+  height: 150px;
+  width: 75%;
+  background-color: indigo;
+  color: white;
+  font-size: 200%;
+  text-align: center;
+  float: right;
+}
+
+.left{
+  height: 500px;
+  width: 25%;
+  background-color: lavender;
+  color: black;
+  float: left;
+}
+.photo{
+  height: 300px;
+  width: 25%;
+  background-color: lavender;
+  float: left;
+}
+.main{
+  height: 650px;
+  width: 75%;
+  background-color: lavender;
+  color: black;
+  font-size: 200%;
+  text-align: center;
+  float: right;
+}
+
+
+.footer{
+  background-color: indigo;
+  color: white;
+  text-align: right;
+  clear: both;
+
+}
+
+.obraz1 {
+  /* justify-self: stretch; */
+  padding: 5px;
+  margin: 10px;
+}
+.obraz2 {
+  /* justify-self: stretch; */
+  padding: 4px;
+  margin: 10px;
+}
+.obraz1:hover {
+  background-color: indigo;
+  padding: 1px;
+  margin: 10px;
+}
+
+.punktowa {
+  list-style-type: square;
+}
