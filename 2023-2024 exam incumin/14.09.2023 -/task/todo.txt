@@ -1,0 +1,10 @@
+1. formularz
+2 pola widoczne, 1 ukryte
+przycisk "pobierz"
+
+2. przycisk "pobierz"
+pobiera dane bazy w3schools
+lista 10 klientów (CustomerName, Country)
+
+3. przycisk "kopjuj"
+po naciśnięciu przycisku kopjuj, pokaż pole tekstowe oraz dane

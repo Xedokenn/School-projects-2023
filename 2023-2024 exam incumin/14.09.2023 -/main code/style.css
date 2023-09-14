@@ -3,3 +3,24 @@ html{
     background-color: bisque;
     color: black;
 }
+
+
+header{
+    background-color: aqua;
+}
+
+
+main {
+    background-color: blue;
+}
+
+
+div {
+    background-color: pink;
+}
+
+
+footer{
+    background-color: red;
+}
+
