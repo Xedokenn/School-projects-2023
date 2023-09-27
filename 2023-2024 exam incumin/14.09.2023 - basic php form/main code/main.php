@@ -34,7 +34,6 @@
 
         <script type="text/javascript" src="button_copy.js"></script>
         <input type="button" onclick="button_copy()" value="Copy">
-
         
     </main>
     <section id="information_section">
