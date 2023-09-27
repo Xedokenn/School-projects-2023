@@ -1,12 +1,16 @@
 <?php
 
-$poczatek = strtotime('January 01 2021');
-$koniec = mktime(0,0,0,2,1,2021);
+#$poczatek = strtotime('January 01 2021');
+#$koniec = mktime(0,0,0,2,1,2021);
+
+$poczatek = new DateTime('2023-01-01 00:00');
+$koniec = date_create_from_format('Y-m-d H:i', '2023-01-01 00:00');
+
 $data_poczatkowa = date('l, d M Y, $poczatek');
 $data_koncowa = date('l, d M Y, $koniec');
 
+
 ?>
-<?php include 'dolaczane/naglowek.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +21,5 @@ $data_koncowa = date('l, d M Y, $koniec');
 <body>
     <p><b>Wyprzedaż: zaczyna sie</b> <?php echo $data_poczatkowa;?></p>
     <p><b>Wyprzedaż: kończy sie</b> <?php echo $data_koncowa;?></p>
-    
 </body>
 </html>
-    
