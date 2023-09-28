@@ -6,10 +6,15 @@ Baza danych nation:
 4. SELECT continents.name, count(countries.name) from continents inner join regions on continents.continent_id = regions.region_id INNER join countries on regions.region_id = countries.region_id group by continents.name; 
 5. select countries.name, country_stats.population from countries
 inner join country_stats on countries.country_id = country_stats.country_id
-where year(country_stats.year)>2015
+where country_stats.year > 2015
 group by country_stats.population desc limit 10;
-6. 
-7. 
-8. 
-9. 
-10. 
+6. select countries.name, languages.language from countries
+inner join country_languages on countries.country_id = country_languages.country_id
+inner join languages on country_languages.language_id = languages.language_id
+where languages.language = "English";
+7. select languages.language, count(countries.country_id) from countries inner join country_languages on countries.country_id = country_languages.country_id inner join languages on country_languages.language_id = languages.language_id where 1 group by languages.language;
+8. select name, national_day from countries order by national_day desc;
+9. select continents.name, avg(countries.area) from countries inner join regions on countries.region_id = regions.region_id inner JOIN continents on continents.continent_id = regions.region_id where continents.name = "Africa";
+10. select continents.name, count(languages.language_id) from countries inner join country_languages on countries.country_id = country_languages.country_id inner join languages on country_languages.language_id = languages.language_id inner join regions on countries.region_id = regions.region_id inner join continents on continents.continent_id = regions.region_id where 1 group by continents.name;
+11. select c.name from (select b.name, count(*) as a from countries as b inner join country_languages as d on b.country_id = d.country_id group by b.name) as c where c.a > 1;
+12. select name, area from countries where area in (select max(area) from countries WHERE 1) or area in (select min(area) from countries where 1);
