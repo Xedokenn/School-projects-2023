@@ -23,20 +23,14 @@ session_start();
             <article>
                 <form method="post" action="save.php">
                     <label>Podaj adres e-mail
-                        <input type="email" name="email" value="
-                        <?php 
-                        if(isset($_SESSION['message'])){
-                            echo $_SESSION['message'];
-                            unset($_SESSION['message']);
-                        }
-                        ?>">
+                        <input type="email" name="email" value="">
                         <p style='color:red; margin:0; font-size:12px; padding:0;'>
                         <?php
                         if(isset($_SESSION['message'])){
                             echo $_SESSION['message'];
                             unset($_SESSION['message']);
                         }
-                        ?>
+                        ?></p>
                     </label>
                     <input type="submit" value="Zapisz się!">
                 </form>
