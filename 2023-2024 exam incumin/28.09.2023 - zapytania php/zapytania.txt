@@ -1,0 +1,15 @@
+Baza danych nation:
+
+1. SELECT name from countries where name like "New%";
+2. SELECT name, national_day from countries where year(national_day) > 1950; 
+3. SELECT name, area from countries order by area desc limit 1; 
+4. SELECT continents.name, count(countries.name) from continents inner join regions on continents.continent_id = regions.region_id INNER join countries on regions.region_id = countries.region_id group by continents.name; 
+5. select countries.name, country_stats.population from countries
+inner join country_stats on countries.country_id = country_stats.country_id
+where year(country_stats.year)>2015
+group by country_stats.population desc limit 10;
+6. 
+7. 
+8. 
+9. 
+10. 
