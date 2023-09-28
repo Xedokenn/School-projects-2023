@@ -1,0 +1,5 @@
+Zadanie na zajęcia
+Napisać dodawanie emaila wprowadzonego do bazy za pomocą biblioteko PDO.
+Należy zmodyfikować skrypt index.php oraz save.php.
+Jeśli adres email jest już w bazie to wypisać komunikat o tym i nie dodawać ponownie.
+Jeśli emaila nie ma jeszcze w bazie to dodać go do bazy i wypisać informację o dodaniu.
