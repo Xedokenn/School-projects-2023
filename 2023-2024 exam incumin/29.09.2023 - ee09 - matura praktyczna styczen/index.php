@@ -16,7 +16,7 @@ $connect = mysqli_connect('localhost','root','','firma');
         <h1>Akta Pracownicze</h1>
         <?php
             $zapytanie = "select imie, nazwisko, adres, miasto, czyRODO, czyBadania from pracownicy where id='2'";
-            echo 
+            
 
         
         ?>
