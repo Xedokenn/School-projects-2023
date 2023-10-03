@@ -1,0 +1,62 @@
+html{
+    margin: 0 auto;
+}
+
+body {
+    background-color: #DDD;
+    font-family: Helvetica;
+    color: #546E7A;
+}
+
+#lewy {
+    float: left;
+    background-color: white;
+    height: 600px;
+    width: 50%;
+    margin: 20px;
+    box-shadow: 0 0 20px gray;
+}
+
+#prawy {
+    float: left;
+    background-color: white;
+    height: 600px;
+    width: 30%;
+    margin: 20px;
+    box-shadow: 0 0 20px gray;
+}
+
+#stopka {
+    clear: both;
+    background-color: #5C6BC0;
+    color: white;
+    padding: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    background-color: #5C6BC0;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    font-weight: 300;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    padding-left: 30px;
+}
+
+h4 {
+    text-align: center;
+}
+
+p {
+    padding-left: 30px;
+}
