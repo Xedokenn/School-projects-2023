@@ -1,0 +1,58 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background-color: #003d33;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+
+#hlewy {
+    width: 70%;
+    float: left;
+}
+
+#hprawy {
+    width: 30%;
+    float: right;
+}
+
+#lewy {
+    background-color: #26a69a;
+    height: 550px;
+    width: 30%;
+    float: left;
+}
+
+#prawy {
+    background-color: #26a69a;
+    height: 550px;
+    width: 70%;
+    float: right;
+}
+
+footer {
+    background-color: #003d33;
+    color: white;
+}
+
+div {
+    width: 400px;
+    margin: 30px;
+    text-align: center;
+    border: #003d33 1px solid;
+}
+
+#btt{
+    background-color: #003d33;
+    color: white;
+    width: 100%;
+    height: 30px;
+    border-style: hidden;
+}
+
+#btt:hover{
+    background-color: #004c40;
+}

@@ -1,0 +1,4 @@
+1. select haslo from uzytkownicy where login='Justyna'; 
+2. select count(*) from dane; 
+3. select u.login, d.rok_urodz, d.przyjaciol, d.hobby, d.zdjecie from uzytkownicy as u inner join dane as d on d.id = u.id; 
+4. alter table dane add stanowisko varchar(255); 
