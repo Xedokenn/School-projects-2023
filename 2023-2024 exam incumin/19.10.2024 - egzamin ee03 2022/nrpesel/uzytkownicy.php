@@ -24,10 +24,12 @@
     <section id="lewy">
         <h3>Logowanie</h3>
         <form method="post" action="uzytkownicy.php">
+
             Login:
             <br>
             <input type="text" name="login">
             <br>
+
             Hasło:
             <br>
             <input type="text" name="haslo">
@@ -35,6 +37,9 @@
             <button type="submit">Zaloguj</button>
         </form>
     </section>
+
+
+
     <section id="prawy">
         <h3>Wizytówka</h3>
         <div id="wizytówka">
@@ -55,10 +60,15 @@
                                 $passwordcheck = $row[0];
                                 $passwordhash = sha1($password);
                             } if ($passwordcheck === $passwordhash) {
+
+
                                 $query2 = "select u.login, d.rok_urodz, d.przyjaciol, d.hobby, d.zdjecie from uzytkownicy as u inner join dane as d on d.id = u.id where u.login='$login'";
                                 $output2 = mysqli_query($connection,$query2);
+
                                 while ($row2 = mysqli_fetch_array($output2)){
                                     $age = date("Y") - $row2[1];
+
+
                                     echo "<img src=$row2[4]> <br>
                                     <h4> $row2[0], ($age)<br>
                                     <p>Hobby: $row2[3]
@@ -68,13 +78,14 @@
                             } else {
                                 echo " złe hasło";
                             }
-                            
                         } else {
                             echo "Nie dałeś hasła";
                         }
                     } else {
                         echo "Login nie istnieje";
                     }
+
+                    
                 }mysqli_close($connection);
             ?>
         </div>
