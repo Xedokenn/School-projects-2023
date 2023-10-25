@@ -1,3 +1,20 @@
+<?php
+    $fh = fopen("testfile.txt", 'w') or die("Nie udało się utworzyć pliku");
+
+
+    $text = <<<_END
+    Linia 1
+    Linia 2
+    Linia 3
+    _END;
+
+    fwrite($fh, $text) or die("nie udało się zapisać danych w pliku");
+    fclose($fh);
+    echo "Plik 'testfile.txt' został zapisany pomyślnie";
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
