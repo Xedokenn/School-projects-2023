@@ -1,0 +1,61 @@
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: rgb(230, 220, 240);
+  color: darkmagenta;
+  height: 150px;
+  font-size: 300%;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+  height: 250px;
+  text-align: center;
+}
+
+#lewy {
+  background-color: rgb(230, 210, 240);
+  width: 50%;
+  height: 450px;
+  float: left;
+}
+
+#prawy {
+  background-color: rgb(230, 200, 240);
+  width: 50%;
+  height: 450px;
+  float: left;
+}
+
+footer {
+  background-color: rgb(230, 220, 240);
+  color: darkmagenta;
+  text-align: right;
+  float: right;
+  height: 50px;
+  width: 100%;
+}
+
+img {
+  height: 100px;
+  width: 220px;  
+  padding: 5px;
+  margin: 5px;;
+}
+
+img:hover {
+  background-color: rgb(243, 188, 238);
+}
+
+b {
+  text-align: center;
+}
+
+table {
+  text-align: right;
+  
+
+}
