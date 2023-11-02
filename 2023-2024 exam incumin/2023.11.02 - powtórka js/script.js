@@ -30,3 +30,14 @@ function palindrom() {
     }
     
 }
+
+function random() {
+    let string = "abcdefghijklmnopqrstuvwxyz";
+    let output = "";
+
+    for (let i=0; i < 8; i++) {
+        output += string[Math.floor(Math.random()*20)];
+        console.log(output);
+    }
+    document.getElementById("wynik").value = output;
+}
