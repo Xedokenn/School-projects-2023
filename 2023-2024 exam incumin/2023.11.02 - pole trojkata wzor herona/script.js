@@ -13,7 +13,6 @@ function oblicz() {
 
         document.getElementById("wynik").innerHTML = pole;                
       }else{
-        console.log("not valid triangle");
+        document.getElementById("wynik").innerHTML = "Taki trójkąt nie istnieje";
       }
-    
 }
