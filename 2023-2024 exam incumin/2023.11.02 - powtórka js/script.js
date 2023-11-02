@@ -39,5 +39,5 @@ function random() {
         output += string[Math.floor(Math.random()*20)];
         console.log(output);
     }
-    document.getElementById("wynik").value = output;
+    document.getElementById("napis").value = output;
 }
