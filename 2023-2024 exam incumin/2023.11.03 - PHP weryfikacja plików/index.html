@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tit-less</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const validate =  ( form ) => {
+            fail = validate(form.formname.value);
+            fail += validate(form.surname.value);
+            fail += validate(form.username.value);
+            fail += validate(form.password.value);
+            fail += validate(form.age.value);
+            fail += validate(form.email.value);
+
+            if (fail == "") {
+                return true;
+            } else {
+                alert(fail);
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <table class="signup" border="0" cellpadding="2" cellspacing="5" bgcolor="#eeeeee">
+        <th colspan="2" align="center"> Formularz rejestracyjny </th>
+        <form method="post" action="adduser.php" onsubmit="return validate(this)">
+            <tr>
+                <td>Imie</td>
+                <td><input type="text" maxlength="32" name="forename"></td>
+            </tr>
+            <tr>
+                <td>Nazwisko</td>
+                <td><input type="text" maxlength="32" name="surname"></td>
+            </tr>
+            <tr>
+                <td>Nazwa użytkownika</td>
+                <td><input type="text" maxlength="16" name="username"></td>
+            </tr>
+            <tr>
+                <td>Hasło</td>
+                <td><input type="text" maxlength="12" name="password"></td>
+            </tr>
+            <tr>
+                <td>Wiek</td>
+                <td><input type="text" maxlength="3" name="age"></td>
+            </tr>
+            <tr>
+                <td>Mail</td>
+                <td><input type="text" maxlength="64" name="email"></td>
+            </tr>
+            <tr>
+                <td><input type="button" maxlength="64" name="Submit"></td>
+
+            </tr>
+        </form>
+    
+</body>
+</html>
