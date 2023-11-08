@@ -13,7 +13,10 @@ def main():
         print('to nie string')
 
 
-    for liczba in lista_pliku:
+    #  tablica = [0,0]
+    #  for liczba in lista_pliku:
+        #  print(plik[liczba].count("0"))
+        
         
         
         
