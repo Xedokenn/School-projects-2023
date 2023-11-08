@@ -17,7 +17,8 @@ def main():
         
         
         
-        
+# link
+#https://arkusze.pl/maturalne/informatyka-2023-czerwiec-matura-rozszerzona.pdf
 
 if __name__ == '__main__':
     main()
