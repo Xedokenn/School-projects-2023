@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	session_start();
-	header("Refresh:2");
+	header("Refresh:20");
 ?>
 <html>
 <head>
@@ -24,7 +24,6 @@
 			$querry2 = "SELECT id FROM grzyby";
 			if ($result = mysqli_query($con, $querry2)) {
 			    $rowcount = mysqli_num_rows($result);
-			    echo "Total rows in this table : $rowcount <br>";
 			} else {
 				echo "broken";
 			}
@@ -35,7 +34,6 @@
 				$_SESSION['views'] = 1;
 			 }
 			 $var = $_SESSION['views'];
-			 echo $var;
 
 			$querry1 = "SELECT nazwa_pliku, opis FROM grzyby where id = $var";
 			$output = mysqli_query($con, $querry1);
