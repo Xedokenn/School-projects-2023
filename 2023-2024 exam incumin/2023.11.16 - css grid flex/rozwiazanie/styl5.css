@@ -1,0 +1,106 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: Verdana;
+}
+#miniatura {
+	background: Sienna;
+	height: 100px;
+	width: 20%;
+	float: left;
+}
+#tytulowy {
+	background: Sienna;
+	color: orange;
+	height: 100px;
+	width: 80%;
+	float: left;
+}
+#lewy {
+	background: BurlyWood;
+	height: 700px;
+	width: 70%;
+	float: left;
+}
+#prawy {
+	background: BurlyWood;
+	height: 700px;
+	width: 30%;
+	float: left;
+}
+#stopka {
+	background: Sienna;
+	color: orange;
+	text-align: center;
+	clear: both;
+}
+img {
+	margin: 7px;
+	padding: 5px;
+	border: 1px solid RosyBrown;
+}
+img:hover {
+	border-color: Maroon;
+}
+
+
+.menu {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0 3rem;
+	background-color: blueviolet;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.menu a {
+	margin: 0 1rem;
+	text-decoration: none;
+	padding: 1rem .5rem;
+	color: white;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown ul {
+	width: 200px;
+	text-align: center;
+	position: absolute;
+	background: navajowhite;
+	color: white;
+	padding: 0;
+	list-style-type: none;
+	box-shadow: 0px 0px 23px 0px red;
+	margin-top: 10px;
+	border-radius: 7px;
+	display: none;
+}
+
+.dropdown ul li {
+	padding: .5rem;
+}
+
+.dropdown ul li a {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+.dropdown ul li:hover{
+	background: pink;
+	border-radius: 7px;
+}
+
+.dropdown a:focus + ul,
+.dropdown a:hover + ul
+.dropdown ul:hover {
+	display: block;
+}
