@@ -1,0 +1,11 @@
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: bisque;
+    color: black;
+}
+
+.signup {
+    border:1px solid #999999;
+    font: normal 14px helvetica;
+    color: #444444;
+    }
