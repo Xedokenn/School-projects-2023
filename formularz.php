@@ -12,7 +12,7 @@
         </style>
     </head>
     <body>
-        <form action="index.php" method="POST">
+        <form action="formularz.php" method="POST">
             <label for="login">Login</label><br/>
             <input type="text" name="login"><br/>
             <label for="psswd">Hasło</label><br/>

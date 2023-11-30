@@ -1,0 +1,10 @@
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: bisque;
+    color: black;
+}
+
+table, th, td, tr {
+    border: 0.1vmin solid black;
+    border-collapse: collapse;
+}
