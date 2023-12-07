@@ -67,7 +67,7 @@
                     $sum = 1*$list[0] + 3*$list[1] + 7*$list[2] + 9*$list[3] + 1*$list[4] + 3*$list[5] + 7*$list[6] + 9*$list[7] + 1*$list[8] + 3*$list[9];
                     $mas = $sum%10;
                     $end = 10 - $mas;
-                    if ($mas == 0 && $list[10] = $end) {
+                    if ($mas == 0 || $list[10] = $end) {
                         $sql3 = "SELECT pesel from pracownicy where pesel = $pesel";
                         $query3 = mysqli_query($conn,$sql3);
                         $row3 = mysqli_fetch_row($query3);
