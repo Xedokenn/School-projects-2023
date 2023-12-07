@@ -1,0 +1,4 @@
+1. select * from pracownicy; 
+2. select * from pracownicy where nazwisko = "Król"; 
+3. select count(id) as "ilość pracowników" FROM `pracownicy`; 
+4. INSERT INTO pracownicy (imie, nazwisko, PESEL) values ('Rak', 'Monika', 00101843690); 

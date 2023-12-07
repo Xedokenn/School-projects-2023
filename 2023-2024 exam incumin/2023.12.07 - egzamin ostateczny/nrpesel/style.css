@@ -1,0 +1,81 @@
+html {
+    font-family: Garamond;
+    text-align: center;
+}
+
+#baner {
+    background-color: #0451b0;
+    color: white;
+    height: 70px;
+    font-size: 150%;
+}
+
+#lewy {
+    background-color: #5ca4fd;
+    height: 800px;
+    width: 35%;
+    float: left;
+    color: black;
+}
+
+#prawy {
+    background-color: #8ec0fd;
+    height: 800px;
+    width: 65%;
+    float: left;
+    color: black;
+}
+
+table {
+    margin: auto;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    font-size: 75%;
+}
+
+th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+tr td {
+    border-style: solid;
+
+}
+ul {
+    list-style: none;
+    width: 180px;
+}
+
+a {
+    color: black;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin: 10px;
+    text-decoration: none;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+}
+
+li:hover {
+    background-color: #0451b0;
+}
+
+footer {
+    background-color: #0451b0;
+    color: white;
+    height: 70px;
+    font-size: 150%;
+    clear: both;
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: 120px;
+}

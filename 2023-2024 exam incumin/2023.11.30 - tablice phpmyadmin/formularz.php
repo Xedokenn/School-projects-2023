@@ -31,7 +31,6 @@
                         $nazwisko = $_POST['nazwisko'];
                         $pesel = $_POST['pesel'];
 
-
                         if (strlen($pesel) == 11) {
                             $list = str_split($pesel);
                             $sum = 1*$list[0] + 3*$list[1] + 7*$list[2] + 9*$list[3] + 1*$list[4] + 3*$list[5] + 7*$list[6] + 9*$list[7] + 1*$list[8] + 3*$list[9];
@@ -45,16 +44,8 @@
                         echo 'pesel zły';
                     }
 
-
                     $sql2 = "INSERT INTO uczen(imie,nazwisko,pesel) VALUES ('$imie','$nazwisko','$pesel')";
                     $query_i = mysqli_query($conn, $sql2);
-
-
-                    
-
-
-
-
                     mysqli_close($conn);
                 ?>
         </main>
