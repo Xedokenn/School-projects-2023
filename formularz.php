@@ -50,9 +50,9 @@
 
 
                 // Ciasteczka
-                setcookie('ciastko', 'ciastko2', time()+60);
-                if (isset($_COOKIE['ciastko'])) {
-                    echo $_COOKIE['ciastko'];
+                setcookie('klucz', 'wartosc', time()+60);
+                if (isset($_COOKIE['klucz'])) {
+                    echo $_COOKIE['klucz'];
                 };
 
                 mysqli_close($conn);
