@@ -1,0 +1,177 @@
+------------------------------------------------------------------------------------------------
+HTML
+------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciągi liczbowe</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+        <div id="b1">
+            <h2>Poznaj ciągi liczbowe</h2>
+        </div>
+        <div id="b2">
+            <a href="liczby.html">
+                <h5>Ciągi arytmetyczne</h5>
+            </a>
+        </div>
+        <div id="b3">
+            <a href="fib.html">
+                <h5>Ciąg Fibonacciego</h5>
+            </a>
+        </div>
+        <div id="b4">
+            <img src="obraz1.png" alt="Fibonacci">
+        </div>
+    </header>
+    <main>
+        <div id="lewy">
+            <ol>
+                <li>ciągi arymetyczne</li>
+                <li>ciągi geometryczne</li>
+                <li>ciąg Fibonacciego</li>
+            </ol>
+        </div>
+        <div id="prawy">
+            <img src="obraz2.jpg" alt="Fibonacci">
+        </div>
+    </main>
+    <footer>
+        <p>Autor: Jan Kupczyk 4TID</p>  
+    </footer>
+</body>
+</html>
+
+------------------------------------------------------------------------------------------------
+Kwerendy
+------------------------------------------------------------------------------------------------
+1. SELECT nazwisko, rok_urodzenia FROM `matematycy`
+2. SELECT id,imie,nazwisko FROM `matematycy` WHERE liczba_publikacji BETWEEN 5 AND 20
+3. SELECT * FROM `matematycy` where rok_urodzenia > 1800 ORDER By liczba_publikacji DESC LIMIt 1
+4. DROP TABLE `typy`
+
+------------------------------------------------------------------------------------------------
+HTML
+------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciągi liczbowe</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <header>
+
+        <div id="b1">
+            <h2>Poznaj ciągi liczbowe</h2>
+        </div>
+        <div id="b2">
+            <a href="liczby.html">
+                <h5>Ciągi arytmetyczne</h5>
+            </a>
+        </div>
+        <div id="b3">
+            <a href="fib.html">
+                <h5>Ciąg Fibonacciego</h5>
+            </a>
+        </div>
+        <div id="b4">
+            <img src="obraz1.png" alt="Fibonacci">
+        </div>
+    </header>
+    <main>
+        <div id="lewy">
+            <ol>
+                <li>ciągi arymetyczne</li>
+                <li>ciągi geometryczne</li>
+                <li>ciąg Fibonacciego</li>
+            </ol>
+        </div>
+        <div id="prawy">
+            <h2>Generowanie ciągu arytmetycznego</h2>
+            Pierwszy wyraz A1: <input type="number" id="a1"><br>
+            Różnica ciągu R: <input type="number" id="r"><br>
+            Liczba wyrazów ciągu: <input type="number" id="n"><br>
+            <button onclick="ciag()">Generuj Ciąg</button><br>
+            <span id="wynik"></span>
+        </div>
+    </main>
+    <footer>
+        <p>Autor: Jan Kupczyk 4TID</p>  
+    </footer>
+    <script>
+        function ciag() {
+            let a1 = document.getElementById('a1').value;
+            a1 = parseInt(a1);
+            let r = document.getElementById('r').value;
+            r = parseInt(r);
+            let n = document.getElementById('n').value;
+            n = parseInt(n);
+            let wynik = "Ciąg artmetyczny zawiera wyrazy: ";
+            wynik += a1;
+            for(let i = 1; i < n; i++) {
+                a1 = a1 + r;
+                wynik += ", " + a1;
+            }
+            document.getElementById('wynik').innerHTML = wynik;
+        }
+    </script>
+</body>
+</html>
+
+------------------------------------------------------------------------------------------------
+CSS
+------------------------------------------------------------------------------------------------
+body {
+    font-family: Verdana, sans-serif;
+    color: #2f2f2f;
+    margin: 0;
+}
+header > div,
+main > div {
+    float: left;
+}
+
+#b1 {
+    background-color: #dcdcdc;
+    width: 55%;
+    height: 80px;
+    text-align: center;
+}
+#b2, #b3, #b4 {
+    background-color: #dcdcdc;
+    width: 15%;
+    height: 80px;
+}
+#lewy {
+    background-color: #808080;
+    width: 30%;
+    height: 450px;
+}
+#prawy {
+    background-color: #808080;
+    width: 70%;
+    height: 450px;
+}
+footer {
+    background-color: #dcdcdc;
+    text-align: center;
+}
+h5 {
+    color: #808080;
+    border: 1px solid #808080;
+    margin: 7px;
+    padding: 10px;
+    font-size: 80%;
+}
+input {
+    color: grey;
+}
+
+

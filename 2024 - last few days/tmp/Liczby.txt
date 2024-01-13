@@ -1,0 +1,363 @@
+---------------------------------------------------------------------------
+HTML
+---------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liczby</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html"><img src="logo.png" alt="baner" /></a>
+  </header>
+
+  <nav>
+
+    <a href="" onclick="number()">Opis</a>
+    <a href="indexliczba.html">Jaka to liczba?</a>
+    <a href="" onclick="zakres()">Liczby całkowite z zakresu</a>
+
+  </nav>
+
+  <main class="ft">
+    <p>
+      Wykonał: Jan Kupczyk
+    </p>
+  </main>
+
+
+<script src="index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+
+---------------------------------------------------------------------------
+JavaScript
+---------------------------------------------------------------------------
+function number() {
+    var x = prompt("Podaj liczbę (całkowita): ") * 1
+    var a = x > 0 ? "Liczba " + x + " jest dodatnia" :
+        (x < 0 ? "Liczba " + x + " jest ujemna" :
+            "Liczba " + x + " to zero!")
+    alert(a)
+}
+
+function zakres() {
+    var x = parseInt(prompt("Podaj liczbę (START)"))
+    var y = parseInt(prompt("Podaj liczbę (END)"))
+    var z = " "
+    for (i = x; i <= y; i++) {
+        z += i + ", "
+    }
+    for (i = x; i >= y; i--) {
+        z += i + ", "
+    }
+    alert(z)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Jan Kupczyk
+
+---------------------------------------------------------------------------
+HTML
+---------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liczby</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="baner.png" alt="baner" /></a>
+    </header>
+
+    <nav>
+        <input id="haslo" type="text" value="Podaj hasło" />
+        <button onclick="location.href=haslo.value+'.html'">OK</button>
+    </nav>
+
+    <main class="ft">
+        <p>
+            Wykonał: Jan Kupczyk
+        </p>
+    </main>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+
+---------------------------------------------------------------------------
+CSS
+---------------------------------------------------------------------------
+body {
+    margin: 10px auto;
+    width: 850px;
+    font: 18px Arial;
+}
+
+header,
+nav,
+main {
+    outline: 1px solid;
+}
+
+nav,
+main {
+    float: left;
+    min-height: 300px;
+}
+
+nav {
+    width: 40%;
+}
+
+main {
+    width: 60%;
+}
+
+p,
+nav a {
+    margin: 10px;
+}
+
+.ft > p{
+    margin-top: 269px;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jan Kupczyk */
+

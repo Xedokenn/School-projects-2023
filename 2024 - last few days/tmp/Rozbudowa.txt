@@ -1,0 +1,162 @@
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<DOCTYPE html>
+	<html lang="pl">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bazy danych | Czytelnia</title>
+		<link rel="stylesheet" href="style.css" />
+
+	</head>
+
+	<body>
+		<div class="main">
+			<div id="baner">
+
+				<h1>PROJEKT ROZBUDOWY BAZY DANYCH CZYTELNI</h1>
+			</div>
+			<div id="zdjecie">
+				<img src="" alt="baza danych czytelni" vspace="50" style="border: 2px solid black;">
+			</div>
+			<div class="author">
+				<h3>AUTOR STRONY: Jan Kupczyk</h3> 
+				<h3 style="margin-top: 40px;">PLIKI DO POBRANIA</h3>
+				<ul>
+					<li><a href="kwerendy.txt">Kwerendy do bazy</a></li>
+					<li><a href="">Eksport MySQL</a></li>
+				</ul>
+
+			</div>
+			<div class="foot">
+				<h2>Egzamin E.14 Tworzenie aplikacji internetowych i baz danych oraz administrowanie bazami.</h2>
+				<p>Wykonał: Jan Kupczyk</p>
+			</div>
+
+
+
+		</div>
+
+	</body>
+
+	</html>
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Kwerendy
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Zapytanie 1: SELECT Tytul FROM ksiazki WHERE RokWydania>1970;
+Zapytanie 2: SELECT autorzy.Nazwisko,ksiazki.Tytul FROM autorzy INNER JOIN ksiazki ON autorzy.IDAutor=ksiazki.AutorID ;
+Zapytanie 3: SELECT egzemplarze.IDEgzemplarz,ksiazki.Tytul FROM egzemplarze INNER JOIN ksiazki ON egzemplarze.IDEgzemplarz=ksiazki.IDKsiazki where egzemplarze.DoWypozyczenia=1;
+Zapytanie 4: INSERT INTO autorzy VALUES(3,'Adam','Asnyk');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Jan Kupczyk
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CSS
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body,
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    color: white;
+    background-color: #3B85AA;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+}
+
+#zdjecie {
+    width: 80%;
+    height: 450px;
+    text-align: center;
+    float: left;
+}
+
+.author {
+    color: white;
+    background-color: #4E9BB5;
+    width: 20%;
+    height: 450px;
+    float: left;
+}
+
+.foot {
+    color: white;
+    background-color: #3B85AA;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial;
+    clear: both;
+}
+
+a {
+    color: white;
+}
+

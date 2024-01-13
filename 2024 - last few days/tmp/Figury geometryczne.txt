@@ -1,0 +1,237 @@
+----------------------------------------------------------------------------------
+HTML
+----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strona główna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">Figury Geometryczne i Matematycy</a>
+  </header>
+  <nav>
+    <h3>WYBIERZ FIGURĘ</h3>
+    <ol>
+      <li><a href="kwadrat.html">KWADRAT</a>
+        <ul>
+          <li>Obwód</li>
+          <li>Pole</li>
+        </ul>
+      </li>
+      <li><a href="kolo.html">KOŁO</a>
+        <ul>
+          <li>Obwód</li>
+          <li>Pole</li>
+        </ul>
+      </li>
+    </ol>
+    <h3>
+      <a href="">BAZA DANYCH</a>
+    </h3>
+  </nav>
+  <main>
+    <h1>FIGURY GEOMETRYCZNE</h1>
+    <span>KWADRAT <img src="kwadrat.png" alt="Kwadrat"></span>
+    <span>KOŁO <img src="kolo.png" alt="Koło"></span>
+  </main>
+  <footer>
+    Strona stworzona przez: Jan Kupczyk
+  </footer>
+</body>
+
+</html>
+
+<!-- Jan Kupczyk -->
+
+----------------------------------------------------------------------------------
+HTML
+----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koło</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">FIGURY GEOMETRYCZNE I MATEMATYCY</a>
+  </header>
+  <nav>
+    <h3>WYBIERZ FIGURĘ</h3>
+    <ol>
+      <li><a href="kwadrat.html">KWADRAT</a>
+        <ul>
+          <li>Obwód</li>
+          <li>Pole</li>
+        </ul>
+      </li>
+      <li><a href="kolo.html">KOŁO</a>
+        <ul>
+          <li>Obwód</li>
+          <li>Pole</li>
+        </ul>
+      </li>
+    </ol>
+    <h3><a href="">BAZA DANYCH</a></h3>
+  </nav>
+  <main>
+    <i>Podstrona w trakcie budowy</i>
+  </main>
+  <footer>
+    Strona stworzona przez: Jan Kupczyk
+  </footer>
+</body>
+
+</html>
+
+<!-- Jan Kupczyk -->
+
+----------------------------------------------------------------------------------
+HTML
+----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kwadrat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <a href="index.html">FIGURY GEOMETRYCZNE I MATEMATYCY</a>
+  </header>
+  <nav>
+    <h3>WYBIERZ FIGURĘ</h3>
+    <ol>
+      <li><a href="kwadrat.html">KWADRAT</a>
+        <ul>
+          <li>Obwód</li>
+          <li>Pole</li>
+        </ul>
+      </li>
+      <li><a href="kolo.html">KOŁO</a>
+        <ul>
+          <li>Obwód</li>
+          <li>Pole</li>
+        </ul>
+      </li>
+    </ol>
+    <h3><a href="">BAZA DANYCH</a></h3>
+  </nav>
+  <main>
+    <h1>KWADRAT</h1>
+    <p><i>Podaj długość boku</i> <input id="input1" type="number"></p>
+    <p>
+      <button onclick="obliczPole()">Oblicz pole</button>
+      <button onclick="obliczObwod()">Oblicz obwód</button>
+    </p>
+    <output id="output1"></output>
+  </main>
+  <footer>
+    Strona stworzona przez: Jan Kupczyk
+  </footer>
+  <script>
+    obliczPole = () => {
+      if (input1.value == "" || (typeof input1.value * 1) == "") {
+        alert("Wprowadź wartość liczbową!")
+      }
+      else {
+        output1.innerHTML = "P = a<sup>2</sup>= " + (input1.value * input1.value)
+      }
+    }
+    obliczObwod = () => {
+      if (input1.value == "" || (typeof input1.value * 1) == "") {
+        alert("Wprowadź wartość liczbową!")
+      }
+      else {
+        output1.innerHTML = "Obw = 4a = " + (4 * input1.value)
+      }
+    }
+  </script>
+</body>
+
+</html>
+
+<!-- Jan Kupczyk -->
+
+----------------------------------------------------------------------------------
+CSS
+----------------------------------------------------------------------------------
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+nav {
+  width: 20%;
+  height: 500px;
+}
+
+main {
+  width: 80%;
+}
+
+span img {
+  position: absolute;
+  top: 200px;
+  display: none;
+}
+
+span:hover img {
+  display: inline;
+}
+
+header,
+nav,
+footer {
+  background: #63b03c;
+  color: white;
+}
+
+header a,
+nav a,
+footer a {
+  color: white;
+}
+
+header {
+  font: small-caps 300% Arial;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+ul {
+  list-style-type: square;
+}
+
+nav,
+main {
+  float: left;
+}
+
+footer {
+  clear: left;
+}
+
+
+/* Jan Kupczyk */
+

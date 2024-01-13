@@ -1,0 +1,510 @@
+------------------------------------------------------------------------------------------------------------------------
+HTML
+------------------------------------------------------------------------------------------------------------------------
+<DOCTYPE html>
+<html lang="pl">
+	
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Miernik jakości hasła</title>
+	<link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+	<div id="baner">
+		<h1><a href="index.html">Sprawdź swoje hasło</a></h1>
+
+	</div>
+	<div id="haslo2">
+		<h2>Wybierz</h2> <br />
+			<ol>
+				<li><a href="miernikhasla.html">Sprawdź hasło</a></li>
+				<li><a href="terms.html">Zasady tworzenia hasła</a></li>
+			</ol>
+	</div>
+	<div id="haslo">
+		<img src="haslo.png">
+	</div>
+	<div id="foot">
+		<h3>Miernik jakości hasła</h3>
+		<p>Stronę opracował: Jan Kupczyk</p>
+	
+</div>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+
+------------------------------------------------------------------------------------------------------------------------
+JavaScript
+------------------------------------------------------------------------------------------------------------------------
+function pseudoregex() { //regex
+    var dane = document.getElementById("passwd").value;
+
+    if (!dane == 1) {
+        document.getElementById("wynik").style.color = "red";
+        document.getElementById("wynik").innerHTML = "WPISZ HASŁO!";
+    }
+    else if (dane.search("[0-9]") > 0 && dane.length >= 7) {
+        document.getElementById("wynik").style.color = "green";
+        document.getElementById("wynik").innerHTML = "DOBRE";
+    }
+    else if (dane.search("[0-9]") > 0 && dane.length >= 4 && dane.length <= 6) {
+        document.getElementById("wynik").style.color = "blue";
+        document.getElementById("wynik").innerHTML = "ŚREDNIE";
+    }
+
+    else {
+        document.getElementById("wynik").style.color = "orange";
+        document.getElementById("wynik").innerHTML = "SŁABE";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Jan Kupczyk
+
+
+------------------------------------------------------------------------------------------------------------------------
+HTML
+------------------------------------------------------------------------------------------------------------------------
+<DOCTYPE html>
+<html lang="pl">
+	
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Miernik jakości hasła</title>
+	<link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+	<div id="baner">
+		<h1><a href="index.html">Sprawdź swoje hasło</a></h1>
+
+	</div>
+	<div id="haslo2">
+		<h2>Wybierz</h2> <br />
+			<ol>
+				<li><a href="miernikhasla.html">Sprawdź hasło</a></li>
+				<li><a href="terms.html">Zasady tworzenia hasła</a></li>
+			</ol>
+	</div>
+	<div id="haslo">
+		<p>Twoje hasło:<input type="password" id="passwd"><input type="submit" value="Sprawdź" onclick="pseudoregex()"></p>
+		<p id="wynik" style="text-align: center; font-size: larger;"> </p>
+	</div>
+	<div id="foot">
+		<h3>Miernik jakości hasła</h3>
+		<p>Stronę opracował: Jan Kupczyk</p>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+
+------------------------------------------------------------------------------------------------------------------------
+CSS
+------------------------------------------------------------------------------------------------------------------------
+body,
+html {
+	margin: 0px;
+}
+
+#baner {
+	background-color: #829EB9;
+	height: 50px;
+	font-family: Arial;
+	text-align: center;
+}
+
+table {
+	padding: 32px;
+	border: 2px solid;
+	width: 70%;
+}
+
+tr:hover {
+	background-color: blue;
+	color: white;
+}
+
+th {
+	background-color: #B3C6D9;
+	border: 2px solid;
+
+}
+
+td {
+	border: 2px solid;
+}
+
+img {
+	margin: 32px;
+	padding: 10px;
+	border: 2px dashed #B3C6D9;
+}
+
+
+p {
+	margin: 32px;
+}
+
+#haslo2 {
+	background-color: #B3C6D9;
+	height: 600px;
+	width: 25%;
+	float: left;
+}
+
+#zasady {
+	background-color: #E0E9F1;
+	height: 600px;
+	width: 75%;
+	text-align: center;
+	float: left;
+}
+
+#foot{
+	background-color: #829EB9;
+	font-family: Arial;
+	text-align: center;
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jan Kupczyk */
+
+------------------------------------------------------------------------------------------------------------------------
+HTML
+------------------------------------------------------------------------------------------------------------------------
+<DOCTYPE html>
+<html lang="pl">
+	
+<head>
+	 <meta charset="UTF-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Miernik jakości hasła</title>
+	<link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+<body>
+	<div id="baner">
+		<h1><a href="index.html">Sprawdź swoje hasło</a></h1>
+
+	</div>
+	<div id="haslo2">
+		<h2>Wybierz</h2> <br />
+			<ol>
+				<li><a href="miernikhasla.html">Sprawdź hasło</a></li>
+				<li><a href="terms.html">Zasady tworzenia hasła</a></li>
+			</ol>
+	</div>
+	<div id="zasady">
+	  <table>
+			
+			<th>Jakość hasła</th> <th>Opis</th>
+			<tr>
+				<td>DOBRE</td> <td>długość 7 znaków i więcej, zawiera przynajmniej jedną cyfrę</td>
+			</tr>
+			<tr>
+				<td>ŚREDNIE</td> <td>długość 4 do 6 znaków, zawiera przynajmniej jedną cyfrę</td>
+			</tr>
+			<tr>
+				<td>SŁABE</td> <td>inne przypadki</td>
+			</tr>
+		</table> 
+	</div>
+	<div id="foot">
+		<h3>Miernik jakości hasła</h3>
+		<p>Stronę opracował: Jan Kupczyk</p>
+	</div>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+

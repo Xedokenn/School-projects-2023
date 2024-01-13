@@ -1,0 +1,496 @@
+------------------------------------------------------------------------------------------------------------------------------------
+Inny
+------------------------------------------------------------------------------------------------------------------------------------
+-- phpMyAdmin SQL Dump
+-- version 4.5.1
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Czas generowania: 15 Lut 2016, 12:40
+-- Wersja serwera: 10.1.9-MariaDB
+-- Wersja PHP: 5.6.15
+  
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Baza danych: `komis`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `samochody`
+--
+
+CREATE TABLE `samochody` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `marka` text,
+  `model` text,
+  `rocznik` year(4) DEFAULT NULL,
+  `kolor` text,
+  `stan` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `samochody`
+--
+
+INSERT INTO `samochody` (`id`, `marka`, `model`, `rocznik`, `kolor`, `stan`) VALUES
+(1, 'Fiat', 'Punto', 2016, 'czerwony', 'bardzo dobry'),
+(2, 'Fiat', 'Punto', 2002, 'czerwony', 'dobry'),
+(3, 'Fiat', 'Punto', 2007, 'niebieski', 'bardzo bobry'),
+(4, 'Opel', 'Corsa', 2016, 'grafitowy', 'bardzo dobry'),
+(5, 'Opel', 'Astra', 2003, 'niebieski', 'porysowany lakier'),
+(6, 'Toyota', 'Corolla', 2016, 'czerwony', 'bardzo dobry'),
+(7, 'Toyota', 'Corolla', 2014, 'szary', 'dobry'),
+(8, 'Toyota', 'Yaris', 2004, 'granatowy', 'dobry');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `zamowienia`
+--
+
+CREATE TABLE `zamowienia` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `Samochody_id` int(10) UNSIGNED NOT NULL,
+  `Klient` text,
+  `telefon` text,
+  `dataZam` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Zrzut danych tabeli `zamowienia`
+--
+
+INSERT INTO `zamowienia` (`id`, `Samochody_id`, `Klient`, `telefon`, `dataZam`) VALUES
+(1, 3, 'Anna Kowalska', '111222333', '2016-02-15'),
+(2, 6, 'Jan Nowakowski', '222111333', '2016-02-15'),
+(3, 8, 'Marcin Kolwal', '333111222', '2016-02-15');
+
+--
+-- Indeksy dla zrzutów tabel
+--
+
+--
+-- Indexes for table `samochody`
+--
+ALTER TABLE `samochody`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `zamowienia`
+--
+ALTER TABLE `zamowienia`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT dla tabeli `samochody`
+--
+ALTER TABLE `samochody`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT dla tabeli `zamowienia`
+--
+ALTER TABLE `zamowienia`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */; 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+PHP
+------------------------------------------------------------------------------------------------------------------------------------
+<?php
+$conn = mysqli_connect('localhost', 'root', '', 'Komis');
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="style.css">
+
+	<title>Wynajmujemy samochody</title>
+</head>
+
+<body>
+	<div class="main">
+		<div class="wynajem">
+			<h1>Wynajem Samochodów</h1>
+		</div>
+		<div class="toyota">
+			<h2>DZIŚ POLECAMY TOYOTĘ ROCZNIK 2014</h2>
+			<?php
+			$qrr = "SELECT id, marka, kolor FROM samochody WHERE marka LIKE 'Toyota' AND  rocznik = 2014";
+			$res = mysqli_query($conn, $qrr);
+			while ($row = mysqli_fetch_assoc($res)) {
+				echo '<ol>' . $row['id'] . ' ' . $row['marka'] . ' ' . $row['kolor'] . '</ol>';
+			}
+			mysqli_close($conn);
+			?>
+			<h2>WSZYSTKIE DOSTĘPNE SAMOCHODY</h2>
+			<?php
+			$qrr2 = "SELECT id, marka, model, rocznik FROM samochody";
+			$res2 = mysqli_query($conn, $qrr2);
+			while ($row = mysqli_fetch_assoc($res2)) {
+				echo '<ol>' . $row['id'] . ' ' . $row['marka'] . ' ' . $row['model'] . ' ' . $row['rocznik'] . ' ' . '		</ol>';
+			}
+			mysqli_close($conn);
+			?>
+		</div>
+		<div class="tele">
+			<h2>ZAMÓWIONE AUTA Z NUMERAMI TELEFONÓW KLIENTÓW</h2>
+			<?php
+			$qrr3 = "SELECT samochody.id, samochody.model, zamowienia.telefon FROM zamowienia, samochody WHERE samochody.id= zamowienia.id";
+			$res3 = mysqli_query($conn, $qrr3);
+			while ($row = mysqli_fetch_assoc($res3)) {
+				echo '<ol>' . $row['id'] . ' ' . $row['model'] . ' ' . $row['telefon'] . ' ' . '</ol>';
+			}
+			mysqli_close($conn);
+			?>
+		</div>
+
+		<div class="ogloszenia">
+			<h2>NASZA OFERTA</h2>
+			<li>Fiat</li>
+			<li>Toyota</li>
+			<li>Opel</li>
+			<li>Mercedes</li>
+			<p>Tu pobierzesz naszą <a href="/Komis.sql">bazę danych </a></p>
+			<p>Autor stron: Jan Kupczyk</p>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+
+------------------------------------------------------------------------------------------------------------------------------------
+Kwerendy
+------------------------------------------------------------------------------------------------------------------------------------
+Zapytanie 1: SELECT `id`, `model`, `kolor` FROM `samochody` WHERE `marka` LIKE "Toyota" AND `rocznik` = 2014
+Zapytanie 2: SELECT `id`,`marka`, `model`, `rocznik` FROM `samochody`
+Zapytanie 3: SELECT samochody.id, samochody.model, zamowienia.telefon FROM zamowienia, samochody WHERE samochody.id= zamowienia.id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Jan Kupczyk
+
+------------------------------------------------------------------------------------------------------------------------------------
+CSS
+------------------------------------------------------------------------------------------------------------------------------------
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+}
+
+.wynajem {
+    background-color: #0B873D;
+    color: white;
+    font-size: 150%;
+    text-align: center;
+}
+
+.toyota {
+    background-color: #8CE1AE;
+    width: 40%;
+    height: 600px;
+    float: left;
+}
+
+.tele {
+    background-color: #5CCB89;
+    width: 40%;
+    height: 600px;
+    float: left;
+}
+
+.ogloszenia {
+    background-color: #1DA956;
+    width: 20%;
+    height: 600px;
+    float: left;
+}
+
+section {
+    display: block;
+    background-color: #45517D;
+    color: white;
+    font-size: 150%;
+    text-align: center;
+}
+
+a:visited {
+    color: red;
+}
+
+a:link {
+    color: brown;
+}
+
+li {
+    margin: 20px;
+    list-style-image: url(auto.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jan Kupczyk */
+

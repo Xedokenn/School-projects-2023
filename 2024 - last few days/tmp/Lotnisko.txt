@@ -1,0 +1,318 @@
+--------------------------------------------------------------------------------------------------------------------------
+PHP
+--------------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Odloty samolotów</title>
+
+
+	<link rel="stylesheet" href="style.css"> 
+</head>
+
+<body>
+	<div class="s1">
+		<h2>Odloty z lotniska</h2>
+	</div>
+	<div class="s2"><img src="logo.png" alt="logotyp"></div>
+	<div class="main">
+		<table>
+			<tr>
+				<th>LP.</th>
+				<th>NUMER REJSU</th>
+				<th>CZAS</th>
+				<th>KIERUNEK</th>
+				<th>STATUS</th>
+			</tr>
+			<?php
+			require('connect.php');
+
+			$qrr = mysqli_query($qrr, 'SELECT id, nr_rejsu, czas, kierunek, status_lotu from odloty ORDER BY czas desc');
+
+			while ($V = mysqli_fetch_assoc($qrr)) {
+				echo "<tr>";
+				for ($o = 0; $o <= 4; $o++) {
+					echo "<td>";
+					echo $V[$o];
+					echo "</td>";
+				}
+				echo "</tr>";
+			}
+			?>
+		</table>
+	</div>
+	<div class="pobierz">
+		<a href="samolot.png">Pobierz obraz</a>
+	</div>
+	<div id="cookie">
+		<p>
+			<?php
+			include ('cookie.php');
+			?>
+		</p>
+	</div>
+	<footer>Autor: Jan Kupczyk</footer>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+
+--------------------------------------------------------------------------------------------------------------------------
+PHP
+--------------------------------------------------------------------------------------------------------------------------
+<?php
+$conn = mysqli_connect(
+    'localhost',
+    'root',
+    '',
+    'egzamintest'
+    );
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Jan Kupczyk -->
+
+--------------------------------------------------------------------------------------------------------------------------
+PHP
+--------------------------------------------------------------------------------------------------------------------------
+<?php
+			if (isset($_COOKIE["ciasteczko"])) {
+				echo "<b>Miło nam, że nas znowu odwiedziłeś</b>";
+			} else {
+				$cookie_name = "cookie";
+				$cookie_value = "";
+				$cookie_time = time() + 60*60*2;
+				$cookie_path = "";
+				$cookie_domain = "";
+				$cookie_secure  = false;
+				$cookie_httponly = false;
+				setcookie($cookie_name, $cookie_value, $cookie_time, $cookie_path, $cookie_domain, $cookie_secure, $cookie_httponly);
+				echo "<p style='font-style: italic;'>Sprawdź regulamin naszej strony!</p>";
+			}
+ ?>
+
+--------------------------------------------------------------------------------------------------------------------------
+CSS
+--------------------------------------------------------------------------------------------------------------------------
+*{
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: arial;
+    background-color: rgb(244, 164, 96);
+    color: white;
+}
+
+.main
+{
+    clear: both;
+    background-color: rgb(128, 0, 0);
+    padding: 50px;
+    text-transform: uppercase;
+}
+
+
+#cookie
+{
+    float: left;
+    text-align: center;
+    width: 60%;
+}
+
+
+.s1
+{
+    text-align: center;
+    float: left;
+    width: 75%;
+    height: 150px;
+    font-size:200%;
+}
+
+.s2
+{
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 50px;
+}
+
+p
+{
+    padding: 20px;
+    font-size: 150%;
+    border-radius: 2px;
+    border-style: dotted;
+    border-color: rgb(175, 174, 174);
+}
+
+p:hover
+{
+    background-color: rgb(175, 174, 174);
+}
+
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}   
+
+td, th
+{
+    border-radius: 1px;
+    border-style: solid;
+    border-color: rgb(175, 174, 174);
+    padding: 5px;
+}    
+
+.pobierz footer
+{
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-top: 90px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Jan Kupczyk */
+
