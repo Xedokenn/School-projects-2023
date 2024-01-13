@@ -1,0 +1,4 @@
+select nazwa, cena from towary limit 4;
+select cena from towary where nazwa = "cyrkiel";
+select nazwa from towary;
+select count(promocja) as ilosc from towary;
