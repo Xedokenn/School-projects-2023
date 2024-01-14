@@ -53,7 +53,7 @@
         </form>
 
         <?php
-            if(isset($_POST['lista']) && $_POST['sztuki']) {
+            if(isset($_POST['lista']) && isset($_POST['sztuki'])) {
                 $lista = $_POST['lista'];
                 $sztuki = $_POST['sztuki'];
                 $zap2 = "SELECT cena FROM towary WHERE nazwa = '$lista';";
@@ -62,10 +62,7 @@
                 $cena = round($kwo[0] * $sztuki, 1);
                 echo "$cena";
             }
-            else{
-                echo "nie wypełniłeś sztyńksa";
-            }
-            mysqli_close($conn)
+            mysqli_close($conn);
         ?>
     </section>
     <section id="prawy">
